@@ -72,7 +72,7 @@ class Mahasiswa extends CI_Controller {
 		$jumlah_data = $this->admin->Getcountinfo();
 		$config['base_url'] = base_url().'mahasiswa/pertanyaan';
 		$config['total_rows'] = $jumlah_data;
-		$config['per_page'] = 3;
+		$config['per_page'] = 2;
 
 		$config['first_link']       = 'First';
 		$config['last_link']        = 'Last';
