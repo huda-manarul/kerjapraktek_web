@@ -1,0 +1,15 @@
+.nav-scroller{
+	margin: -16px;
+	padding-left: 30px;
+	width: 1380px;
+}
+
+.row{
+	margin-top: 15px;
+	margin-bottom: -15px;
+}
+
+body{
+	background-color: #f8f9fa;
+	max-width: 1365px;
+}
