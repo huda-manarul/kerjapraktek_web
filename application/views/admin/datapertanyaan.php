@@ -20,10 +20,10 @@
 			</tr>
 			<?php } ?>
 		</table>
-	</div>
-	<div class="row">
-		<div class="col">
-			<!--Tampilkan pagination-->
-			<?php echo $this->pagination->create_links(); ?>
+		<div class="row">
+			<div class="col">
+				<!--Tampilkan pagination-->
+				<?php echo $this->pagination->create_links(); ?>
+			</div>
 		</div>
 	</div>

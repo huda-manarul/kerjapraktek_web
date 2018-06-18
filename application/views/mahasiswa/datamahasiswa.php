@@ -1,9 +1,9 @@
 
 <div class="container">
-	<div class="alert alert-info alert-dismissible">
+	<!-- <div class="alert alert-info alert-dismissible">
 		<button type="button" class="close" data-dismiss="alert">×</button>
 		<strong>Success!</strong> This alert box could indicate a successful or positive action.
-	</div>
+	</div> -->
 	<h3><?php echo $judul ?></h3><br>
 	<?php 
 	foreach($user as $u){ 
@@ -21,11 +21,6 @@
 			</tr>
 			<tr>
 				<td>Jenis Kegiatan</td>		
-				<td>:</td>
-				<td><?php echo $u->jenis_kegiatan ?></td>
-			</tr>
-			<tr>
-				<td>Status Kegiatan</td>		
 				<td>:</td>
 				<td><?php echo $u->jenis_kegiatan ?></td>
 			</tr>
@@ -53,6 +48,16 @@
 				<td>Dosen Pembimbing</td>
 				<td>:</td>
 				<td><?php echo $u->nama_dosen ?></td>
+			</tr>
+			<tr>
+				<td>Status Pendaftaran Sidang</td>		
+				<td>:</td>
+				<td><?php echo $u->status ?></td>
+			</tr>
+			<tr>
+				<td>Keterangan</td>		
+				<td>:</td>
+				<td><?php echo $u->keterangan ?></td>
 			</tr>
 		</table>
 		<?php

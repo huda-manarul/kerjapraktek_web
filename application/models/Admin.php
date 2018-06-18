@@ -6,7 +6,7 @@ class Admin extends CI_Model
 	//fungsi cek session
     function logged_id()
     {
-        return $this->session->userdata('level');
+        return $this->session->userdata('user_nama');
     }
 
 	//fungsi check login
@@ -30,9 +30,6 @@ class Admin extends CI_Model
         $this->db->insert($table,$data);
     }
 
-    // public function Getdatauser($where,$table){     
-    //     return $this->db->get_where($table,$where);
-    // }
 
     public function GetdataDosen(){
 

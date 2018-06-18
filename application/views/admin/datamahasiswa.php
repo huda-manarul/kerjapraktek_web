@@ -1,7 +1,7 @@
 
 <div class="container">
 	<h3><?php echo $judul ?></h3><br>
-	<div style="overflow-x:auto;">
+	<!-- <div style="overflow-x:auto;"> -->
 		<table class="table table-hover">
 			<thead>
 				<th>nim</th>
@@ -25,12 +25,11 @@
 			</tr>
 			<?php } ?>
 		</table>
+		<!-- </div> -->
+		<div class="row">
+			<div class="col">
+				<!--Tampilkan pagination-->
+				<?php echo $this->pagination->create_links(); ?>
+			</div>
+		</div>
 	</div>
-</div>
-</div>
-<div class="row">
-	<div class="col">
-		<!--Tampilkan pagination-->
-		<?php echo $this->pagination->create_links(); ?>
-	</div>
-</div>

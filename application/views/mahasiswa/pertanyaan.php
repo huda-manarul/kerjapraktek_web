@@ -1,6 +1,6 @@
 <div class="container">
   <div class="my-3 p-3 bg-white rounded box-shadow">
-    <h4 class="border-bottom border-gray pb-2 mb-0">Informasi</h4>
+    <h4 class="border-bottom border-gray pb-2 mb-0">Forum Diskusi</h4>
     <?php 
     $no = $this->uri->segment('3') + 1;
     foreach($user as $u){ 

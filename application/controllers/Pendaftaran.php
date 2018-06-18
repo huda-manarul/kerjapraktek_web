@@ -14,12 +14,7 @@ class Pendaftaran extends CI_Controller {
 	{
 		
 		if($this->admin->logged_id()){
-			if ($session_data['level']==0) {
-				redirect('dashboard');
-			}
-			else{
-				redirect('mahasiswa');
-			}
+			redirect('login');
 		}
 		else{
 			$this->load->view('pendaftaran/content');
@@ -33,9 +28,6 @@ class Pendaftaran extends CI_Controller {
 		$this->load->view('pendaftaran/daftar',$data);
 	}
 
-	public function cek(){
-		$this->load->view('pendaftaran/notif');
-	}
 
 	public function prosesdaftarkp(){
 		$jenis = $this->input->post('jenis');

@@ -49,7 +49,7 @@ class Login extends CI_Controller {
 	                    //set session userdata
 						$this->session->set_userdata($session_data);
 
-						if ($session_data['level']==0) {
+						if ($session_data['level']=='0') {
 							redirect('dashboard');
 						}
 						else{

@@ -99,6 +99,34 @@ class Dashboard extends CI_Controller {
 		$this->load->view('admin/datasidang',$data);
 	}
 
+	public function persetujuan($no){
+		$where = array(
+			'no' => $no
+		);
+		$data['user'] = $this->admin->Editdatainfo($where,'tbl_mahasiswa_sidang')->result();
+		$this->load->view('admin/persetujuan',$data);
+	}
+
+	public function prosespersetujuan(){
+		
+		$nim = $this->input->post('nim');
+		$status = $this->input->post('status');
+		$ket = $this->input->post('ket');
+
+		$where = array(
+			'nim' => $nim
+		);
+
+		$data = array(
+			'status' => $status,
+			'keterangan' => $ket
+		);
+		$this->admin->jawab($where,$data,'tbl_mahasiswa_sidang');
+		redirect(base_url().'dashboard/datasidang','refresh');
+	}
+
+	
+
 	public function databerita(){
 		$jumlah_data = $this->admin->Getcountinfo('tbl_informasi');
 		$config['base_url'] = base_url().'dashboard/databerita';
@@ -197,10 +225,20 @@ class Dashboard extends CI_Controller {
 		redirect(base_url().'dashboard/datapertanyaan','refresh');
 	}
 
-	
+	public function hapusdosen($nip){
+		$where = array(
+			'nip' => $nip
+		);
+		$this->admin->hapus_data($where,'tbl_dosen');
+		redirect(base_url().'dashboard/datadosen','refresh');
+	}
 
 	public function tambahberita(){
 		$this->load->view('admin/postinfo');
+	}
+
+	public function tambahdosen(){
+		$this->load->view('admin/inputdosen');
 	}
 
 	public function prosestamabahinformasi(){
@@ -211,7 +249,56 @@ class Dashboard extends CI_Controller {
 			'isi_berita' => $berita
 		);
 		$this->admin->Insertdatainfo($data,'tbl_informasi');
-		redirect(base_url().'dashboard','refresh');
+		redirect(base_url().'dashboard/databerita','refresh');
 	}
+
+	public function prosestambahdosen(){
+		$nip = $this->input->post('nip');
+		$nama = $this->input->post('nama');
+		$kuota = $this->input->post('kuota');
+		$data = array(
+			'nip' => $nip,
+			'nama_dosen' => $nama,
+			'sisa_kuota' => $kuota
+		);
+		$this->admin->Insertdatainfo($data,'tbl_dosen');
+		redirect(base_url().'dashboard/datadosen','refresh');
+	}
+
+	public function hapusberita($no){
+		$where = array(
+			'id_berita' => $no
+		);
+		$this->admin->hapus_data($where,'tbl_informasi');
+		redirect(base_url().'dashboard/databerita','refresh');
+	}
+
+	public function editberita($no){
+		$where = array(
+			'id_berita' => $no
+		);
+		$data['user'] = $this->admin->Editdatainfo($where,'tbl_informasi')->result();
+		$this->load->view('admin/editinfo',$data);
+	}
+
+	public function proseseditinformasi(){
+		
+		$id = $this->input->post('id');
+		$judul = $this->input->post('judul');
+		$isi = $this->input->post('berita');
+
+		$where = array(
+			'id_berita' => $id
+		);
+
+		$data = array(
+			'judul_berita' => $judul,
+			'isi_berita' => $isi
+		);
+		$this->admin->jawab($where,$data,'tbl_informasi');
+		redirect(base_url().'dashboard/databerita','refresh');
+	}
+
+	
 
 }

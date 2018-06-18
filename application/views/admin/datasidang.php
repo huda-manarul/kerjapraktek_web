@@ -11,7 +11,8 @@
 			<th>Dosen Pembimbing</th>
 			<th>Surat Keterangan</th>
 			<th>Lembar Pengesahan</th>
-			<th>Aksi</th>
+			<th><center>Status</center></th>
+			<th><center>Aksi</center></th>
 		</tr>
 		</thead>
 		<?php 
@@ -24,7 +25,8 @@
 				<td><?php echo $u->nama_dosen ?></td>
 				<td><a href="<?php echo base_url().'assets/images/'.$u->surat_magang ?>"><?php echo $u->surat_magang ?></a></td>
 				<td><a href="<?php echo base_url().'assets/images/'.$u->lembar_pengesahan ?>"><?php echo $u->lembar_pengesahan ?></a></td>
-				<td><a href="">Persetujuan</a></td>
+				<td><?php echo $u->status ?></td>
+				<td><a href="<?php echo base_url()."dashboard/persetujuan/".$u->no; ?>"> persetujuan </a></td>
 			</tr>
 			<?php } ?>
 		</table>

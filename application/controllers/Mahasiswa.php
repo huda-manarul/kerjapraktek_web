@@ -102,8 +102,14 @@ class Mahasiswa extends CI_Controller {
 
 	public function inputDosbing(){
 		$data['judul'] = "Halaman Input dosbing";
+		$nim = $this->session->userdata("user_name");
+		$where = array(
+			'nim' => $nim
+		);
+		$data['info'] = $this->admin->Editdatainfo($where,'tbl_mahasiswa_dosbing')->result();
 		$data['user'] = $this->admin->GetdataDosen()->result();
 		$this->load->view('pendaftaran/dosbing',$data);
+
 
 	}
 
@@ -121,6 +127,11 @@ class Mahasiswa extends CI_Controller {
 
 	public function daftarSidangKP(){
 		$data['judul'] = "Halaman Pendaftaran Sidang KP";
+		$nim = $this->session->userdata("user_name");
+		$where = array(
+			'nim' => $nim
+		);
+		$data['info'] = $this->admin->Editdatainfo($where,'tbl_mahasiswa_sidang')->result();
 		$this->load->view('pendaftaran/sidang',$data);
 
 	}
