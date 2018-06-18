@@ -4,7 +4,7 @@
 		<tr>
 			<th>judul berita</th>
 			<th>isi berita</th>
-			<th>Aksi</th>
+			<th><center>Aksi</center></th>
 		</tr>
 		<?php 
 		foreach($user as $u){ 
@@ -16,7 +16,7 @@
 				$sub_ringkas= substr($ringkas,0,70);
 				echo $sub_ringkas." . . ."; 
 				?></td>
-				<td>tulis || edit || hapus</td>
+				<td><center>tulis || edit || hapus</center></td>
 			</tr>
 			<?php } ?>
 		</table>

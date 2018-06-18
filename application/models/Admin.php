@@ -30,11 +30,6 @@ class Admin extends CI_Model
         $this->db->insert($table,$data);
     }
 
-    public function GetdataDosenAll(){
-
-        return $this->db->get('tbl_dosen');
-    }
-
     public function Getdatauser($where,$table){     
         return $this->db->get_where($table,$where);
     }
@@ -67,10 +62,6 @@ class Admin extends CI_Model
 
     public function Insertdatainfo($data,$table){
         $this->db->insert($table,$data);
-    }
-
-    public function GetdataMhs(){
-        return $this->db->get('tbl_mahasiswa_kp');
     }
 
     public function GetalldataMhs($nim){
