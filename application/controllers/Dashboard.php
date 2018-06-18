@@ -134,8 +134,8 @@ class Dashboard extends CI_Controller {
 	}
 
 	public function datapertanyaan(){
-		$jumlah_data = $this->admin->Getcountinfo('tbl_informasi');
-		$config['base_url'] = base_url().'dashboard/databerita';
+		$jumlah_data = $this->admin->Getcountinfo('tbl_diskusi');
+		$config['base_url'] = base_url().'dashboard/datapertanyaan';
 		$config['total_rows'] = $jumlah_data;
 		$config['per_page'] = 5;
 
@@ -161,11 +161,43 @@ class Dashboard extends CI_Controller {
 		$from = $this->uri->segment(3);
 		$this->pagination->initialize($config);		
 		$data['judul'] = "Informasi";
-		$data['user'] = $this->admin->Getdatainfo('tbl_informasi',$config['per_page'],$from);
+		$data['user'] = $this->admin->Getdatainfo('tbl_diskusi',$config['per_page'],$from);
 
-		$data['judul'] = "Daftar Informasi KP";
-		$this->load->view('admin/databerita',$data);
+		$this->load->view('admin/datapertanyaan',$data);
 	}
+
+	public function jawabpertanyaan($no){
+		$where = array(
+			'no' => $no
+		);
+		$data['user'] = $this->admin->Editdatainfo($where,'tbl_diskusi')->result();
+		$this->load->view('admin/jawab',$data);
+	}
+
+	public function jawab(){
+		$tanya = $this->input->post('pertanyaan');
+		$jawab = $this->input->post('jawaban');
+
+		$where = array(
+			'pertanyaan' => $tanya
+		);
+
+		$data = array(
+			'jawaban' => $jawab
+		);
+		$this->admin->jawab($where,$data,'tbl_diskusi');
+		redirect(base_url().'dashboard/datapertanyaan','refresh');
+	}
+
+	public function hapuspertanyaan($no){
+		$where = array(
+			'no' => $no
+		);
+		$this->admin->hapus_data($where,'tbl_diskusi');
+		redirect(base_url().'dashboard/datapertanyaan','refresh');
+	}
+
+	
 
 	public function tambahberita(){
 		$this->load->view('admin/postinfo');

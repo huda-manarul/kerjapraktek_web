@@ -6,7 +6,7 @@ class Admin extends CI_Model
 	//fungsi cek session
     function logged_id()
     {
-        return $this->session->userdata('user_id');
+        return $this->session->userdata('level');
     }
 
 	//fungsi check login
@@ -30,9 +30,9 @@ class Admin extends CI_Model
         $this->db->insert($table,$data);
     }
 
-    public function Getdatauser($where,$table){     
-        return $this->db->get_where($table,$where);
-    }
+    // public function Getdatauser($where,$table){     
+    //     return $this->db->get_where($table,$where);
+    // }
 
     public function GetdataDosen(){
 
@@ -60,9 +60,6 @@ class Admin extends CI_Model
         return $this->db->get();
     }
 
-    public function Insertdatainfo($data,$table){
-        $this->db->insert($table,$data);
-    }
 
     public function GetalldataMhs($nim){
         $this->db->select('*');
@@ -79,10 +76,23 @@ class Admin extends CI_Model
         $this->db->insert($table,$data);
     }
 
-    public function edit_data($where,$table){       
+    public function Insertdatainfo($data,$table){
+        $this->db->insert($table,$data);
+    }
+
+    public function Editdatainfo($where,$table){       
         return $this->db->get_where($table,$where);
     }
 
+    function jawab($where,$data,$table){
+        $this->db->where($where);
+        $this->db->update($table,$data);
+    } 
+
+    function hapus_data($where,$table){
+        $this->db->where($where);
+        $this->db->delete($table);
+    }  
 
     function Getdatainfo($table,$number,$offset){
         return $query = $this->db->get($table,$number,$offset)->result();       

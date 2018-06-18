@@ -1,11 +1,12 @@
 	<div class="container">
-		<h3><?php echo $judul ?></h3><br>
-		<table class="table table-striped table-sm">
+		<h3><?php echo $judul ?></h3><br><table class="table table-hover">
+		<thead>
 			<tr>
 				<th>nip</th>
 				<th>nama</th>
 				<th>sisa kuota</th>
 			</tr>
+		</thead>
 			<?php 
 			foreach($user as $u){ 
 				?>

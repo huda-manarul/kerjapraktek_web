@@ -13,3 +13,8 @@ body{
 	/*background-color: #f8f9fa;*/
 	max-width: 1365px;
 }
+
+.table{
+	line-height:100%;
+}
+

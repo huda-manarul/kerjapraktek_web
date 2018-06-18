@@ -3,8 +3,9 @@
 	<table class="table table-hover">
 		<thead>
 			<tr>
-				<th>judul berita</th>
-				<th>isi berita</th>
+				<th>Tanggal Ditanyaakan</th>
+				<th>Pertanyaan</th>
+				<th>Jawaban</th>
 				<th><center>Aksi</center></th>
 			</tr>
 		</thead>
@@ -12,13 +13,10 @@
 		foreach($user as $u){ 
 			?>
 			<tr>
-				<td><?php echo $u->judul_berita ?></td>
-				<td><?php 
-				$ringkas = $u->isi_berita;
-				$sub_ringkas= substr($ringkas,0,70);
-				echo $sub_ringkas." . . ."; 
-				?></td>
-				<td><center><a href="<?php echo base_url().'dashboard/tambahberita' ?>"> tulis </a>|| edit || hapus</center></td>
+				<td><?php echo $u->tanggal ?></td>
+				<td><?php echo $u->pertanyaan ?></td>
+				<td><?php echo $u->jawaban ?></td>
+				<td><center><a href="<?php echo base_url()."dashboard/jawabpertanyaan/".$u->no; ?>"> jawab </a>||<a href="<?php echo base_url()."dashboard/hapuspertanyaan/".$u->no; ?>"> hapus</a></center></td>
 			</tr>
 			<?php } ?>
 		</table>

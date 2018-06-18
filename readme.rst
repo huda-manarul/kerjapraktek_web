@@ -8,7 +8,6 @@ Web Kerja Praktek
 Release Information
 *******************
 
-penambahan pagination pada berita (mahasiswa)
 
 **************************
 Changelog and New Features
@@ -18,7 +17,10 @@ v 0.4 penambahan pagination pada berita (mahasiswa)
 v 0.5 penambahan kolom diskusi (mahasiswa)
 	  perbaikan query dalam model
 	  penambahan menu jawab pertanyaan (admin)
-
+v 0.6 penambahan fungsi tambah berita
+	  perbaikan tampilan tabel data (admin)
+	  perbaikan bug pada tampilan data sidang (admin)
+	  penambahan jawab dan hapus pertanyaan mahasiswa (admin)
 
 *******************
 Server Requirements
