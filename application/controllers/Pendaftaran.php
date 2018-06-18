@@ -33,6 +33,10 @@ class Pendaftaran extends CI_Controller {
 		$this->load->view('pendaftaran/daftar',$data);
 	}
 
+	public function cek(){
+		$this->load->view('pendaftaran/notif');
+	}
+
 	public function prosesdaftarkp(){
 		$jenis = $this->input->post('jenis');
 		$nim = $this->input->post('nim');

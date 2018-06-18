@@ -37,7 +37,7 @@ class Mahasiswa extends CI_Controller {
 
 
 	public function informasi(){
-		$jumlah_data = $this->admin->Getcountinfo();
+		$jumlah_data = $this->admin->Getcountinfo('tbl_informasi');
 		$config['base_url'] = base_url().'mahasiswa/informasi';
 		$config['total_rows'] = $jumlah_data;
 		$config['per_page'] = 3;
@@ -64,12 +64,12 @@ class Mahasiswa extends CI_Controller {
 		$from = $this->uri->segment(3);
 		$this->pagination->initialize($config);		
 		$data['judul'] = "Informasi";
-		$data['user'] = $this->admin->Getdatainfo($config['per_page'],$from);
+		$data['user'] = $this->admin->Getdatainfo('tbl_informasi',$config['per_page'],$from);
 		$this->load->view('mahasiswa/daftarberita',$data);
 	}
 
 	public function pertanyaan(){
-		$jumlah_data = $this->admin->Getcountinfo();
+		$jumlah_data = $this->admin->Getcountinfo('tbl_diskusi');
 		$config['base_url'] = base_url().'mahasiswa/pertanyaan';
 		$config['total_rows'] = $jumlah_data;
 		$config['per_page'] = 2;
@@ -96,7 +96,7 @@ class Mahasiswa extends CI_Controller {
 		$from = $this->uri->segment(3);
 		$this->pagination->initialize($config);		
 		$data['judul'] = "pertanyaan";
-		$data['user'] = $this->admin->Getdatainfo($config['per_page'],$from);
+		$data['user'] = $this->admin->Getdatainfo('tbl_diskusi',$config['per_page'],$from);
 		$this->load->view('mahasiswa/pertanyaan',$data);
 	}
 
@@ -123,6 +123,15 @@ class Mahasiswa extends CI_Controller {
 		$data['judul'] = "Halaman Pendaftaran Sidang KP";
 		$this->load->view('pendaftaran/sidang',$data);
 
+	}
+
+	public function tambahpertanyaan(){
+		$pertanyaan = $this->input->post('pertanyaan');
+		$data = array(
+			'pertanyaan' => $pertanyaan
+		);
+		$this->admin->Insertpertanyaan($data,'tbl_diskusi');
+		redirect(base_url().'mahasiswa/pertanyaan','refresh');
 	}
 
 

@@ -1,6 +1,9 @@
 <div class="container horizontal-centered">
   <div class="col-lg-7">   
     <h3><?php echo $judul ?></h3><hr>
+    <!-- <div class="alert alert-primary" role="alert">
+      This is a primary alert—check it out!
+    </div> -->
     <form action="<?php echo base_url().'mahasiswa/prosesdaftarsidangKP' ?>" method="post" enctype="multipart/form-data">
       <div class="form-group">
         <label for="nim">NIM:</label>

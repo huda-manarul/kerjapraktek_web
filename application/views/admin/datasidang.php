@@ -21,6 +21,7 @@
 						<td><?php echo $u->nama_dosen ?></td>
 						<td><a href="<?php echo base_url().'assets/images/'.$u->surat_magang ?>"><?php echo $u->surat_magang ?></a></td>
 						<td><a href="<?php echo base_url().'assets/images/'.$u->lembar_pengesahan ?>"><?php echo $u->lembar_pengesahan ?></a></td>
+						<td><a href="">Persetujuan</a></td>
 					</tr>
 					<?php } ?>
 				</table>

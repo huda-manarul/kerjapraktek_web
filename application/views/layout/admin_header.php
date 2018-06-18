@@ -26,8 +26,8 @@
       <a class="nav-link active" href="<?php echo base_url().'dashboard/' ?>">Data Mahasiswa KP</a>
       <a class="nav-link" href="<?php echo base_url().'dashboard/datadosen' ?>">Data Dosen Pembimbing</a>
       <a class="nav-link" href="<?php echo base_url().'dashboard/datasidang' ?>">Data Sidang KP</a>
-      <a class="nav-link" href="<?php echo base_url().'dashboard/tambahberita' ?>">Tambah Informasi</a>
-      <a class="nav-link" href="<?php echo base_url().'dashboard/tambahberita' ?>">Tambah Informasi</a>
+      <a class="nav-link" href="<?php echo base_url().'dashboard/databerita' ?>">Informasi KP</a>
+      <a class="nav-link" href="<?php echo base_url().'dashboard/tambahberita' ?>">Pertanyaan Mahasiswa</a>
     </nav>
   </div>
   <br><br>

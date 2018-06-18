@@ -1,5 +1,9 @@
 
 <div class="container">
+	<div class="alert alert-info alert-dismissible">
+		<button type="button" class="close" data-dismiss="alert">×</button>
+		<strong>Success!</strong> This alert box could indicate a successful or positive action.
+	</div>
 	<h3><?php echo $judul ?></h3><br>
 	<?php 
 	foreach($user as $u){ 
@@ -52,6 +56,9 @@
 			</tr>
 		</table>
 		<?php
-		} 
-		?>
-	</div>
+	} 
+	?>
+</div>
+<script type="text/javascript">
+	$('.alert').alert()
+</script>

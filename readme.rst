@@ -2,10 +2,7 @@
 Web Kerja Praktek
 ###################
 
-1. buat database baru bernama project_web
-2. import database dari folder assets>db>project_web.sql
-3. copy file ke folder htdocs>login>
-4. user login lihat pada tabel tbl_users
+
 
 *******************
 Release Information
@@ -18,6 +15,10 @@ Changelog and New Features
 **************************
 
 v 0.4 penambahan pagination pada berita (mahasiswa)
+v 0.5 penambahan kolom diskusi (mahasiswa)
+	  perbaikan query dalam model
+	  penambahan menu jawab pertanyaan (admin)
+
 
 *******************
 Server Requirements

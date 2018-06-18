@@ -40,7 +40,7 @@ class Admin extends CI_Model
     }
 
     public function GetdataDosen(){
-        
+
         $this->db->select('*');
         $this->db->from('tbl_dosen');
         $this->db->where('sisa_kuota != ',0);
@@ -83,23 +83,22 @@ class Admin extends CI_Model
         return $this->db->get();
     }
 
-    public function CountdataMhs(){
-        return $this->db->get('tbl_mahasiswa_kp')->num_rows();
-    }
 
+    public function Insertpertanyaan($data,$table){
+        $this->db->insert($table,$data);
+    }
 
     public function edit_data($where,$table){       
         return $this->db->get_where($table,$where);
     }
 
 
-
-    function Getdatainfo($number,$offset){
-        return $query = $this->db->get('tbl_informasi',$number,$offset)->result();       
+    function Getdatainfo($table,$number,$offset){
+        return $query = $this->db->get($table,$number,$offset)->result();       
     }
- 
-    function Getcountinfo(){
-        return $this->db->get('tbl_informasi')->num_rows();
+
+    function Getcountinfo($table){
+        return $this->db->get($table)->num_rows();
     }
 
 }
