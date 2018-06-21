@@ -45,7 +45,16 @@ class Pendaftaran extends CI_Controller {
 			'alamat_tempat_kp' => $alamat,
 			'penyelia' => $penyelia
 		);
-		$this->admin->InsertdataKP($data,'data_mahasiswa_kp');
+
+		$data1 = array(
+			'nama_user' => $nama,
+			'username' => $nim,
+			'password' => 'a',
+			'level' => 1
+		);
+
+		$this->admin->InsertdataKP($data,'tbl_mahasiswa_kp');
+		$this->admin->InsertdataKP($data1,'tbl_users');
 		redirect(base_url(),'refresh');
 
 	}

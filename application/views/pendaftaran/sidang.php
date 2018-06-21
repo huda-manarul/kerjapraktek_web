@@ -12,7 +12,7 @@
     <h3><?php echo $judul ?></h3><hr>
     <form action="<?php echo base_url().'mahasiswa/prosesdaftarsidangKP' ?>" method="post" enctype="multipart/form-data">
       <div class="form-group">
-        <label for="nim" hidden>NIM:</label>
+        <label for="nim">NIM:</label>
         <input type="text" class="form-control" name="nim" value="<?php echo $this->session->userdata("user_name"); ?>" readonly>
       </div>
       <div class="form-group">
