@@ -25,12 +25,6 @@ class Admin extends CI_Model
         }
     }
 
-
-    public function InsertdataKP($data,$table){
-        $this->db->insert($table,$data);
-    }
-
-
     public function GetdataDosen(){
 
         $this->db->select('*');
@@ -39,14 +33,6 @@ class Admin extends CI_Model
         return $this->db->get();
     }
 
-
-    public function Insertdatadosbing($data,$table){
-        $this->db->insert($table,$data);
-    }
-    
-    public function Insertdatasidang($data,$table){
-        $this->db->insert($table,$data);
-    }
     
     public function Getdatasidang(){
         $this->db->select('*');
@@ -68,10 +54,6 @@ class Admin extends CI_Model
         return $this->db->get();
     }
 
-
-    public function Insertpertanyaan($data,$table){
-        $this->db->insert($table,$data);
-    }
 
     public function Insertdatainfo($data,$table){
         $this->db->insert($table,$data);

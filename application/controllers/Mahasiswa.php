@@ -120,7 +120,7 @@ class Mahasiswa extends CI_Controller {
 			'nim' => $nim,
 			'nip' => $nip
 		);
-		$this->admin->Insertdatadosbing($data,'tbl_mahasiswa_dosbing');
+		$this->admin->Insertdatainfo($data,'tbl_mahasiswa_dosbing');
 		redirect(base_url().'mahasiswa','refresh');
 
 	}
@@ -141,7 +141,7 @@ class Mahasiswa extends CI_Controller {
 		$data = array(
 			'pertanyaan' => $pertanyaan
 		);
-		$this->admin->Insertpertanyaan($data,'tbl_diskusi');
+		$this->admin->Insertdatainfo($data,'tbl_diskusi');
 		redirect(base_url().'mahasiswa/pertanyaan','refresh');
 	}
 
@@ -171,7 +171,7 @@ class Mahasiswa extends CI_Controller {
 			'lembar_pengesahan' => $sah,
 			'surat_magang' => $ketmagang
 		);
-		$this->admin->Insertdatasidang($data,'tbl_mahasiswa_sidang');
+		$this->admin->Insertdatainfo($data,'tbl_mahasiswa_sidang');
 		redirect(base_url().'mahasiswa','refresh');
 	}
 

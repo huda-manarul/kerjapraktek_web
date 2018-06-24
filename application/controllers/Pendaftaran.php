@@ -53,8 +53,8 @@ class Pendaftaran extends CI_Controller {
 			'level' => 1
 		);
 
-		$this->admin->InsertdataKP($data,'tbl_mahasiswa_kp');
-		$this->admin->InsertdataKP($data1,'tbl_users');
+		$this->admin->Insertdatainfo($data,'tbl_mahasiswa_kp');
+		$this->admin->Insertdatainfo($data1,'tbl_users');
 		redirect(base_url(),'refresh');
 
 	}
