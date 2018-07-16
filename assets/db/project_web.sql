@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 24, 2018 at 07:58 AM
--- Server version: 10.1.22-MariaDB
--- PHP Version: 7.1.4
+-- Generation Time: 16 Jul 2018 pada 07.47
+-- Versi Server: 10.1.26-MariaDB
+-- PHP Version: 7.1.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_diskusi`
+-- Struktur dari tabel `tbl_diskusi`
 --
 
 CREATE TABLE `tbl_diskusi` (
@@ -36,7 +36,7 @@ CREATE TABLE `tbl_diskusi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_diskusi`
+-- Dumping data untuk tabel `tbl_diskusi`
 --
 
 INSERT INTO `tbl_diskusi` (`no`, `pertanyaan`, `jawaban`, `tanggal`) VALUES
@@ -45,12 +45,13 @@ INSERT INTO `tbl_diskusi` (`no`, `pertanyaan`, `jawaban`, `tanggal`) VALUES
 (3, '2', '3', '2018-06-23 16:18:33'),
 (4, 'global', '4', '2018-06-23 16:18:38'),
 (5, 'rak o kesalahan', 'tenan', '2018-06-24 05:55:41'),
-(6, 'fix', '', '2018-06-24 05:57:55');
+(6, 'fix', '', '2018-06-24 05:57:55'),
+(7, 'sidang KP gelombang 2 kapan yah min?', '', '2018-07-16 05:36:58');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_dosen`
+-- Struktur dari tabel `tbl_dosen`
 --
 
 CREATE TABLE `tbl_dosen` (
@@ -60,7 +61,7 @@ CREATE TABLE `tbl_dosen` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_dosen`
+-- Dumping data untuk tabel `tbl_dosen`
 --
 
 INSERT INTO `tbl_dosen` (`nip`, `nama_dosen`, `sisa_kuota`) VALUES
@@ -73,7 +74,7 @@ INSERT INTO `tbl_dosen` (`nip`, `nama_dosen`, `sisa_kuota`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_informasi`
+-- Struktur dari tabel `tbl_informasi`
 --
 
 CREATE TABLE `tbl_informasi` (
@@ -84,22 +85,20 @@ CREATE TABLE `tbl_informasi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_informasi`
+-- Dumping data untuk tabel `tbl_informasi`
 --
 
 INSERT INTO `tbl_informasi` (`id_berita`, `judul_berita`, `isi_berita`, `tanggal_berita`) VALUES
-(4, 'Notice Me Senpai 0', '<p>Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai</p>\r\n', '2018-06-18 11:28:05'),
-(5, 'Notice Me Senpai 1', '<p> Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai </p>', '2018-06-17 16:34:33'),
-(8, 'Notice Me Senpai 2', '<p> Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai </p>', '2018-06-17 16:34:33'),
-(9, 'Notice Me Senpai 3', '<p> Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai </P>', '2018-06-17 16:34:15'),
-(10, 'Notice Me Senpai 4', '<p> Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai </p>', '2018-06-17 16:34:33'),
-(11, 'Notice Me Senpai 5', '<p> Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai </p>', '2018-06-17 16:34:33'),
-(14, 'Notice Me Senpai 6', '<p>Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai Senpai</p>\r\n', '2018-06-18 11:34:47');
+(8, 'PEMBUKAAN BEASISWA UNGGULAN BA', '<p>Diberitahukan bagi segenap mahasiswa UDINUS untuk semester 1 dan 3, bahwa KEMENDIKBUD RI membuka pendaftaran beasiswa Unggulan Batch 2 tahun 2018. Pendaftaran secara online melalui alamat (http://beasiswaunggulan.kemdikbud.go.id) pada tanggal 1-30 Juli 2018. Oleh karena itu bagi mahasiswa UDINUS yang ingin mendaftar beasiswa Unggulan tersebut , sebelum anda mendaftar melalui laman kemdikbud mahasiswa diwajibkan untuk mendaftar melalui web bima ( bima.dinus.ac.id) data tersebut sebagai database Biro Kemahasiswaan.<br />\r\nselanjutnya silahkan ikuti semua laur dari web kemdikbud</p>\r\n', '2018-07-16 05:34:41'),
+(9, 'RESCHEDULE UAS MATKUL BIOMEDIK', '<p>Dikarenakan server down pada waktu ujian CBT maka jadwal ujian BIOMEDIK 3 akan di-reschedule pada KAMIS 12 JULI 2018.<br />\r\nKelompok D11.21, D11.22, D11.23, D11.24 dilaksanakan pada pukul 07.30 WIB RUANG :<br />\r\nD11.21 - D.2.C<br />\r\nD11.22 - D.2.D<br />\r\nD11.23 - D.3.L<br />\r\nD11.24 - D.3.M<br />\r\nKelompok D11.25 dilaksanakan pukul 10.00 WIB diruang D.2.J<br />\r\nMohon Diperhatikan</p>\r\n', '2018-07-16 05:32:52'),
+(10, 'UAS KLASIFIKASI PENYAKIT DAN T', '<p>Untuk matkul KLASIFIKASI PENYAKIT DAN TINDAKAN 4, ujian akan diadakan secara online(CBT) dengan jadwal yang sama di ruang sbb :<br />\r\nD22.41 - D.2.G<br />\r\nD22.42 - D.2.H<br />\r\nD22.43 - D.2.I<br />\r\nD22.44 - D.2.J<br />\r\nD22.45 - D.2.K<br />\r\nno. kursi diurutkan sesuai absensi ujian.<br />\r\nTerima Kasih</p>\r\n', '2018-07-16 05:32:17'),
+(14, 'PERUBAHAN PELAKSANAAN UAS BHS ', '<p>Ujian Bahasa Inggris 2 dilakasanakan pada tgl 13 Juli 2018 jam 16.00 - 18.00 dengan ketentuan ruang sbb :<br />\r\nD11.17TS | LAB BHS 1<br />\r\nD11.17PE | LAB BHS 2<br />\r\nLAB BHS berlokasi di Gedung D lantai 3.</p>\r\n', '2018-07-16 05:31:46'),
+(15, 'Pengumuman SIDANG TA Sistem In', '<p>Selamat kepada 16 Mahasiswa yang telah mendaftar sidang TA SI periode 10 Juli 2018. -- Berikut adalah daftar nim mahasiswa yang siap dijadwalkan untuk ujian Senin dan Kamis (23 dan 26 Juli 2018): *A12.2011.04233;</p>\r\n\r\n<p>A12.2013.04850; A12.2013.04853; A12.2014.05068; A12.2014.05076; A12.2014.05078; A12.2014.05084; A12.2014.05092; A12.2014.05093; A12.2014.05098; A12.2014.05125; A12.2014.05151; A12.2014.05167; A12.2014.05187; A12.2014.05206; A12.2014.05226 --</p>\r\n\r\n<p>Berkas silakan di unduh pada siadin daftar TA. --Kepada 16 mahasiswa yang telah terdaftar, mohon menyiapkan 4 berkas untuk TIM penguji berupa:</p>\r\n\r\n<p>1. Manuskrip Skripsi;</p>\r\n\r\n<p>2. potongan Jadwal (download) di stabilo pada nama masing-maisng dosen;</p>\r\n\r\n<p>3. Lembar nilai sesuai nama masing-masing dosen;</p>\r\n\r\n<p>4. Lembar revisi (khusus penguji)</p>\r\n\r\n<p>5. Lembar Berita Acara (khusus untuk ketua penguji) -- Mahasiswa diwajibkan hadir pada hari Kamis 19 Juli 2018 di Ruang rapat Sistem Informasi pukul 15:00 untuk pengarahan pra sidang dengan membawa: 1. 4 Bekas untuk TIM PENGUJI seperti disebutkan di atas 2. Poster cetak A3 dengan footer sesuai template. Selamat dan sukses untuk sidang TA nya ya..!!! Koord TA SI, Fajrian Nur Adnan, MCS 085755583618</p>\r\n', '2018-07-16 05:30:20');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_mahasiswa_dosbing`
+-- Struktur dari tabel `tbl_mahasiswa_dosbing`
 --
 
 CREATE TABLE `tbl_mahasiswa_dosbing` (
@@ -108,7 +107,7 @@ CREATE TABLE `tbl_mahasiswa_dosbing` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_mahasiswa_dosbing`
+-- Dumping data untuk tabel `tbl_mahasiswa_dosbing`
 --
 
 INSERT INTO `tbl_mahasiswa_dosbing` (`nim`, `nip`) VALUES
@@ -118,7 +117,7 @@ INSERT INTO `tbl_mahasiswa_dosbing` (`nim`, `nip`) VALUES
 ('A11.2015.09278', '0686.11.1997.125');
 
 --
--- Triggers `tbl_mahasiswa_dosbing`
+-- Trigger `tbl_mahasiswa_dosbing`
 --
 DELIMITER $$
 CREATE TRIGGER `kuota_dosen` AFTER INSERT ON `tbl_mahasiswa_dosbing` FOR EACH ROW BEGIN
@@ -133,7 +132,7 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_mahasiswa_kp`
+-- Struktur dari tabel `tbl_mahasiswa_kp`
 --
 
 CREATE TABLE `tbl_mahasiswa_kp` (
@@ -146,7 +145,7 @@ CREATE TABLE `tbl_mahasiswa_kp` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_mahasiswa_kp`
+-- Dumping data untuk tabel `tbl_mahasiswa_kp`
 --
 
 INSERT INTO `tbl_mahasiswa_kp` (`nim`, `nama`, `jenis_kegiatan`, `tempat_kp`, `alamat_tempat_kp`, `penyelia`) VALUES
@@ -159,7 +158,7 @@ INSERT INTO `tbl_mahasiswa_kp` (`nim`, `nama`, `jenis_kegiatan`, `tempat_kp`, `a
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_mahasiswa_sidang`
+-- Struktur dari tabel `tbl_mahasiswa_sidang`
 --
 
 CREATE TABLE `tbl_mahasiswa_sidang` (
@@ -173,18 +172,18 @@ CREATE TABLE `tbl_mahasiswa_sidang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_mahasiswa_sidang`
+-- Dumping data untuk tabel `tbl_mahasiswa_sidang`
 --
 
 INSERT INTO `tbl_mahasiswa_sidang` (`no`, `nim`, `judul_kp`, `surat_magang`, `lembar_pengesahan`, `status`, `keterangan`) VALUES
-(8, 'A11.2015.09277', 'Lorem ipsum dolor sit amet, qui malis accommodare te.', 'A11.2015.09277-SK.png', 'A11.2015.09277-LP.png', 'ditolak', 'febi'),
-(9, 'A11.2015.09063', 'halo halo bandung', '', '', 'ditolak', 'file lampiran tidak ada'),
-(10, 'A11.2015.09278', '', '', '', '', '');
+(8, 'A11.2015.09277', 'Pembuatan website Dinas kelautan dan Perikanan', 'A11.2015.09277-SK.png', 'A11.2015.09277-LP.png', 'ditolak', 'febi'),
+(9, 'A11.2015.09063', 'Pembuatan website e-commerce berbasis wordpress', '', '', 'ditolak', 'file lampiran tidak ada'),
+(10, 'A11.2015.09278', 'pembuatan aplikasi manajemen keuangan berbasis android', '', '', '', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_session`
+-- Struktur dari tabel `tbl_session`
 --
 
 CREATE TABLE `tbl_session` (
@@ -195,7 +194,7 @@ CREATE TABLE `tbl_session` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_session`
+-- Dumping data untuk tabel `tbl_session`
 --
 
 INSERT INTO `tbl_session` (`id`, `ip_address`, `timestamp`, `data`) VALUES
@@ -310,12 +309,23 @@ INSERT INTO `tbl_session` (`id`, `ip_address`, `timestamp`, `data`) VALUES
 ('ot59kv39esf7b1udlpa42m3ddfdieedv', '::1', 1529568113, 0x5f5f63695f6c6173745f726567656e65726174657c693a313532393536383131333b757365725f69647c733a313a2237223b757365725f6e616d657c733a31343a224131312e323031352e3039323739223b757365725f706173737c733a313a2261223b757365725f6e616d617c733a31323a224d616e6172756c2048756461223b6c6576656c7c733a313a2231223b),
 ('pgfgin8htlf5idqb54s07tktd3uhqcks', '::1', 1529568117, 0x5f5f63695f6c6173745f726567656e65726174657c693a313532393536383131333b757365725f69647c733a313a2237223b757365725f6e616d657c733a31343a224131312e323031352e3039323739223b757365725f706173737c733a313a2261223b757365725f6e616d617c733a31323a224d616e6172756c2048756461223b6c6576656c7c733a313a2231223b),
 ('dlorcfhikk7vka5sbs72ugc4nlprfkjs', '::1', 1529770754, 0x5f5f63695f6c6173745f726567656e65726174657c693a313532393737303732303b757365725f69647c733a313a2236223b757365725f6e616d657c733a31343a224131312e323031352e3039323737223b757365725f706173737c733a313a2261223b757365725f6e616d617c733a31313a22416c64696e6f204976616e223b6c6576656c7c733a313a2231223b),
-('fpv4a9gob0foavodpept1nv0nj9dfa5s', '::1', 1529819878, 0x5f5f63695f6c6173745f726567656e65726174657c693a313532393831393739313b757365725f69647c733a313a2239223b757365725f6e616d657c733a31343a224131312e323031352e3039323738223b757365725f706173737c733a313a2261223b757365725f6e616d617c733a31303a22557461726979616e746f223b6c6576656c7c733a313a2231223b);
+('fpv4a9gob0foavodpept1nv0nj9dfa5s', '::1', 1529819878, 0x5f5f63695f6c6173745f726567656e65726174657c693a313532393831393739313b757365725f69647c733a313a2239223b757365725f6e616d657c733a31343a224131312e323031352e3039323738223b757365725f706173737c733a313a2261223b757365725f6e616d617c733a31303a22557461726979616e746f223b6c6576656c7c733a313a2231223b),
+('re1pqnjvvcigmhmiagsjm2of22lh02gs', '::1', 1531711077, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313731313037373b757365725f69647c733a313a2238223b757365725f6e616d657c733a31343a224131312e323031352e3039303633223b757365725f706173737c733a313a2261223b757365725f6e616d617c733a31303a2242616775732044757461223b6c6576656c7c733a313a2231223b),
+('03iio2hahvc1t9qcah62vadkltuqikdg', '::1', 1531711383, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313731313338333b),
+('ueqd9452o81np4ntsesniv6mek6p66vj', '::1', 1531712738, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313731323733383b),
+('ep7qrcdb4vbcunc7btlmj3evlm4ub4os', '::1', 1531713064, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313731333036343b757365725f69647c733a313a2231223b757365725f6e616d657c733a313a2261223b757365725f706173737c733a313a2261223b757365725f6e616d617c733a313a2261223b6c6576656c7c733a313a2230223b),
+('gbbq9a1ootr1u5fa8mvvfua0op18ppms', '::1', 1531715443, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313731353434333b757365725f69647c733a313a2231223b757365725f6e616d657c733a313a2261223b757365725f706173737c733a313a2261223b757365725f6e616d617c733a313a2261223b6c6576656c7c733a313a2230223b),
+('1iea3q782coff4hnd14gmca0ufo0h938', '::1', 1531715745, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313731353734353b757365725f69647c733a313a2231223b757365725f6e616d657c733a313a2261223b757365725f706173737c733a313a2261223b757365725f6e616d617c733a313a2261223b6c6576656c7c733a313a2230223b),
+('d8a5bvsiduhhrs30viq6e0k0ht54omga', '::1', 1531717847, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313731373834373b757365725f69647c733a313a2231223b757365725f6e616d657c733a313a2261223b757365725f706173737c733a313a2261223b757365725f6e616d617c733a313a2261223b6c6576656c7c733a313a2230223b),
+('8aflkp7gipob7t6r82o3cdik2s1d2917', '::1', 1531718432, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313731383433323b757365725f69647c733a313a2231223b757365725f6e616d657c733a313a2261223b757365725f706173737c733a313a2261223b757365725f6e616d617c733a313a2261223b6c6576656c7c733a313a2230223b),
+('h2s4kdgqmf550nrl6ohbl54e32g79t5t', '::1', 1531719019, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313731393031393b757365725f69647c733a313a2231223b757365725f6e616d657c733a313a2261223b757365725f706173737c733a313a2261223b757365725f6e616d617c733a313a2261223b6c6576656c7c733a313a2230223b),
+('qhmbga48b2tup67q46244sjg4hnbebro', '::1', 1531719320, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313731393332303b757365725f69647c733a313a2231223b757365725f6e616d657c733a313a2261223b757365725f706173737c733a313a2261223b757365725f6e616d617c733a313a2261223b6c6576656c7c733a313a2230223b),
+('ptmdcgurmfv6hel7n7bqpe0rpll23bii', '::1', 1531719781, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533313731393439333b757365725f69647c733a313a2231223b757365725f6e616d657c733a313a2261223b757365725f706173737c733a313a2261223b757365725f6e616d617c733a313a2261223b6c6576656c7c733a313a2230223b);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_users`
+-- Struktur dari tabel `tbl_users`
 --
 
 CREATE TABLE `tbl_users` (
@@ -327,7 +337,7 @@ CREATE TABLE `tbl_users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_users`
+-- Dumping data untuk tabel `tbl_users`
 --
 
 INSERT INTO `tbl_users` (`id_user`, `nama_user`, `username`, `password`, `level`) VALUES
@@ -393,12 +403,12 @@ ALTER TABLE `tbl_users`
 -- AUTO_INCREMENT for table `tbl_diskusi`
 --
 ALTER TABLE `tbl_diskusi`
-  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `tbl_informasi`
 --
 ALTER TABLE `tbl_informasi`
-  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `tbl_mahasiswa_sidang`
 --

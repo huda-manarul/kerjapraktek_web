@@ -13,26 +13,6 @@ Release Information
 Changelog and New Features
 **************************
 
-v 0.4."\n"
-- penambahan pagination pada berita (mahasiswa)"\n"
-v 0.5."\n"
-- penambahan kolom diskusi (mahasiswa)"\n"
-- perbaikan query dalam model"\n"
-- penambahan menu jawab pertanyaan (admin)"\n"
-v 0.6."\n"
-- penambahan fungsi tambah berita"\n"
-- perubahan tampilan tabel data (admin)"\n"
-- perbaikan bug pada tampilan data sidang (admin)"\n"
-- penambahan fungsi jawab dan hapus pertanyaan mahasiswa (admin)"\n"
-v 0.7."\n"
-- penambahan fungsi edit dan hapus berita"\n"
-- perbaikan tampilan tabel data (admin)"\n"
-v 0.8."\n"
-- penambahan fungsi persetujuan sidang (admin)"\n"
-- perbaikan tampilan tabel data mahasiswa (mahasiswa)"\n"
-v 0.9."\n"
-- penambahan fungsi tambah dan hapus dosen (admin)"\n"
-
 *******************
 Server Requirements
 *******************
